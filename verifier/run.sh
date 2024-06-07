@@ -20,11 +20,11 @@ if [[ $1 == "msp430" ]]; then
 elif [[ $1 == "arm" ]]; then
 
 	app=$3
-	path="../TRACES/beebs/"${app}"/"
+	path="../ISC-FLAT/beebs/"${app}"/"
 
-	input_file=${path}"TRACES_NonSecure.list"
+	input_file=${path}"app.list"
 	cflog_file=${path}"0.cflog"
-	input_elf=${path}"TRACES_NonSecure.elf"
+	input_elf=${path}"app.elf"
 
 	arch_type="armv8-m33"
 	funcname="application"
