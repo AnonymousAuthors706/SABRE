@@ -2,7 +2,7 @@
 
 if [[ $1 == "msp430" ]]; then
 
-	app=$3
+	app=$2
 	path="../ACFA/beebs/"${app}"/attack/"
 
 	cflog_file=${path}"combined.cflog"
@@ -19,7 +19,7 @@ if [[ $1 == "msp430" ]]; then
 	
 elif [[ $1 == "arm" ]]; then
 
-	app=$3
+	app=$2
 	path="../ISC-FLAT/beebs/"${app}"/"
 
 	input_file=${path}"app.list"
