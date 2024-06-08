@@ -18,7 +18,7 @@ The `verifier` directory contains the main source code for our prototype. Beside
 
 ### Dependencies
 
-Besides default python packages, SABRE prototype only requires [SymPy](https://www.sympy.org/en/index.html) which can be installed with the following command: `pip3 install sympy`
+Besides default python packages, SABRE prototype requires the following packages: [SymPy](https://www.sympy.org/en/index.html), [Keystone](https://www.keystone-engine.org/), and [ELFtools](https://pypi.org/project/pyelftools/). All of which can be installed using `pip`
 
 ### How to run
 
