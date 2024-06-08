@@ -18,4 +18,14 @@ The `verifier` directory contains the main source code for our prototype. Beside
 
 ### Dependencies
 
+Besides default python packages, SABRE prototype only requires [SymPy](https://www.sympy.org/en/index.html) which can be installed with the following command: `pip3 install sympy`
+
 ### How to run
+
+1) Install dependencies and clone this repository
+
+2) `cd` into the `verifier` directory. Then, run `./run.sh <ARCH> <APP>` replacing `<ARCH>` with the selected architecture to run (either `msp430` or `arm`) and replacing `<APP>` with the selected BEEBs application to evaluate (`aha-compress`, `cover`, `crc_32`, `fibcall`, `jfdctint`, `lcdnum`, or `libbs`)
+
+3) While running the scripts, SABRE will first verify the CF-Log is valid, and in doing so will determine that it is invalid. Then perform backwards tracing and symbolic data-flow analysis (as described in our paper) to identify the memory corruption that caused the eventual control flow violation. Then, it will attempt to patch the vulnerability and verify that patch. The terminal window should show `[!] NO ATTACK DETECTED [!] Concluded at <INSTR>`
+
+4) Once the patch is verified, a patched version of the binary (and its associated `*.lst` file) will be added to the subdirectory of the test. When the `msp430` was selected for `<ARCH>`, the patched binary will appear in the `ACFA` directory under the subdirectory of the BEEBs application. Similarly, when `arm` is selected for `<ARCH>`, the patched binary will appear in the subdirectory. In both cases, `patch.elf` and `patch.list` should appear in the subdirectories.
