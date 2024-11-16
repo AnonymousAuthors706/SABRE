@@ -1,0 +1,1 @@
+ignore files within this directory while keeping directory structure
