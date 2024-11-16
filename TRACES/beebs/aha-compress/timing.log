@@ -1,0 +1,5 @@
+Build CFG: 15.976635972037911 ms
+	Locate addr_init part 2: 4.528522491455078 ms
+Patch Generator
+	 Generate Patched Nodes: 7.37762451171875 ms
+	 Update ELF: 31.186342239379883 ms

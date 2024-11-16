@@ -1,0 +1,11 @@
+Building app CFG...
+python3 generate_cfg.py --asmfile /home/ac7717/Documents/ACFA/logs/beebs/cover/tcb.lst --arch elf32-msp430 --cfgfile ./objs/cfg.bin
+Done update_successors
+Done update_parents
+0xe000 ['0xe018', '0xe028']
+0xe028 ['0xe030', '0xe03e']
+0xe074 ['0xe07c', '0xe080']
+0xe3aa ['0xe3bc', '0xe3c0']
+0xe3dc ['0xe3e4', '0xe55a']
+0xe55a ['0x', '0xe3dc']
+Done
