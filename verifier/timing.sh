@@ -16,7 +16,7 @@ do
 	do
 		rm ./logs/timingdata.log
 		touch ./logs/timingdata.log
-		for (( i = 0; i < 49; i++)); do
+		for (( i = 0; i < $1; i++)); do
 			./run.sh $mcu $app
 			rm ./objs/*.bin
 		done
