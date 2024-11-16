@@ -1,0 +1,5 @@
+verifier/__pycache__/*
+verifier/MSProbe/__pycache__/*
+verifier/objs/*
+!verifier/objs/keep-structure.txt
+verifier/logs/*.log
