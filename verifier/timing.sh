@@ -1,7 +1,9 @@
 apps=('lcdnum' 'libbs' 'fibcall' 'cover' 'jfdctint' 'aha-compress' 'crc_32')
 mcus=('msp430')
-# apps=('cover')
-# mcus=('arm')
+#apps=('lcdnum')
+#mcus=('arm')
+
+######## NEED TO DO LCDNUM-ARM AT THE END
 
 # msp430 headers
 #  back trace, symb exec, loc addr_init 1, loc addr_init 2, gen patch, update elf, remap cflog, patch cfg, symb patch
@@ -16,12 +18,12 @@ do
 	do
 		rm ./logs/timingdata.log
 		touch ./logs/timingdata.log
-		for (( i = 0; i < 151; i++)); do
+		for (( i = 0; i < $1; i++)); do
 			./run.sh $mcu $app
 			rm ./objs/*.bin
 		done
 		# mv './logs/timingdata.log' './timing/'${mcu}'/'${app}'.csv'
-		cat './logs/timingdata.log' >> './timing/uaf/'${mcu}'/'${app}'.csv'
+		cat './logs/timingdata.log' >> './timing/ovf/'${mcu}'/'${app}'.csv'
 	done
 done
 
