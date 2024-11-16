@@ -196,9 +196,9 @@ Disassembly of section .empty:
     e330:	3e 50 00 08 	add	#2048,	r14	;#0x0800
     e334:	6e 4e       	mov.b	@r14,	r14	
     e336:	0f 99       	cmp	r9,	r15	
-    e338:	00 28       	jnc	$+2      	;abs 0xe33a
+    e338:	04 28       	jnc	$+10     	;abs 0xe342
     e33a:	0f 9a       	cmp	r10,	r15	
-    e33c:	00 2c       	jc	$+2      	;abs 0xe33e
+    e33c:	02 2c       	jc	$+6      	;abs 0xe342
     e33e:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
     e342:	3f 40 21 00 	mov	#33,	r15	;#0x0021
     e346:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)

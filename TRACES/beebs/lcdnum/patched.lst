@@ -1315,7 +1315,7 @@ Disassembly of section .empty:
  806001e:	440a      	add	r2, r1
  8060020:	7812      	ldrb	r2, [r2, #0]
  8060022:	4599      	cmp	r9, r3
- 8060024:	d303      	bcc.n	806002e <empty+0x2e>
+ 8060024:	d304      	bcc.n	8060030 <empty+0x30>
  8060026:	4600      	mov	r0, r0
  8060028:	459a      	cmp	sl, r3
  806002a:	d801      	bhi.n	8060030 <empty+0x30>

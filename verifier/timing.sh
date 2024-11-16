@@ -1,7 +1,7 @@
-# apps=('lcdnum' 'libbs' 'fibcall' 'cover' 'jfdctint' 'aha-compress' 'crc_32')
-# mcus=('msp430' 'arm')
-apps=('lcdnum')
-mcus=('arm')
+apps=('lcdnum' 'libbs' 'fibcall' 'cover' 'jfdctint' 'aha-compress' 'crc_32')
+mcus=('msp430' 'arm')
+#apps=('lcdnum')
+#mcus=('arm')
 
 ######## NEED TO DO LCDNUM-ARM AT THE END
 
@@ -18,7 +18,7 @@ do
 	do
 		rm ./logs/timingdata.log
 		touch ./logs/timingdata.log
-		for (( i = 0; i < 200; i++)); do
+		for (( i = 0; i < $1; i++)); do
 			./run.sh $mcu $app
 			rm ./objs/*.bin
 		done
