@@ -1,0 +1,21 @@
+Build CFG: 21.36982200318016 ms
+Verify CFLog / Detect Attack: 11.129159000120126 ms
+	CFLog addrs: 4085, Offending Entry: 548
+---------------------
+Exploit Locator Time
+	Backward Trace Time: 0.16730900097172707 ms
+		Slice Start Addr: 183, Slice End Addr: 548
+		Slice addrs: 366
+	Slice Symbolic Execution Time: 2458.402848991682 ms
+		mem_accesses : 128
+		emul_instrs = 214
+	Locate addr_init part 2: 3.870892003760673 ms
+Patch Generator
+	 Generate Patched Nodes: 6.415066003683023 ms
+	 Update ELF: 29.437673001666553 ms
+Patch Verifier:
+	Remap CFLog: 1.0627610026858747 ms
+	Build Patched CFG: 15.448764999746345 ms
+	Symb. Execute Patched Slice: 2747.6107589900494 ms
+		mem_accesses : 87
+		emul_instrs = 222

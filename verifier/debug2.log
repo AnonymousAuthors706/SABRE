@@ -1,0 +1,1372 @@
+arm
+Building app CFG...
+python3 generate_cfg.py --asmfile ../TRACES/TRACES_NonSecure.list --arch armv8-m33 --cfgfile ./objs/cfg.bin
+adding 080401f8 <__do_global_dtors_aux>:
+adding 0804021c <frame_dummy>:
+adding 08040238 <delay>:
+adding 08040268 <read_data>:
+adding 08040398 <get_temperature>:
+adding 080403d0 <get_humidity>:
+adding 08040408 <pulseIn>:
+adding 08040454 <getUltrasonicReading>:
+adding 08040498 <run_ultrasonic>:
+adding 080404e2 <run_temperature>:
+adding 0804052e <run_humidity>:
+adding 0804057a <read_command>:
+adding 080405b8 <process_command>:
+adding 08040694 <record_output_data>:
+adding 080406b4 <application>:
+adding 08040778 <MX_GPIO_Init>:
+adding 0804083c <SecureFault_Callback>:
+adding 08040858 <SecureError_Callback>:
+adding 08040874 <main>:
+adding 080408ac <Error_Handler>:
+adding 080408b8 <HAL_MspInit>:
+adding 08040900 <MemManage_Handler>:
+adding 08040906 <UsageFault_Handler>:
+adding 0804090c <SVC_Handler>:
+adding 0804091a <PendSV_Handler>:
+adding 08040928 <SysTick_Handler>:
+adding 08040934 <SystemInit>:
+adding 08040944 <SystemCoreClockUpdate>:
+adding 0804095c <Reset_Handler>:
+adding 08040968 <CopyDataInit>:
+adding 08040970 <LoopCopyDataInit>:
+adding 0804097e <FillZerobss>:
+adding 08040984 <LoopFillZerobss>:
+adding 08040992 <LoopForever>:
+adding 080409ac <ADC1_2_IRQHandler>:
+adding 080409ae <HAL_Init>:
+adding 080409e4 <HAL_InitTick>:
+adding 08040a5c <HAL_IncTick>:
+adding 08040a84 <__NVIC_SetPriorityGrouping>:
+adding 08040acc <__NVIC_GetPriorityGrouping>:
+adding 08040ae8 <__NVIC_SetPriority>:
+adding 08040b3c <NVIC_EncodePriority>:
+adding 08040ba4 <SysTick_Config>:
+adding 08040be8 <HAL_NVIC_SetPriorityGrouping>:
+adding 08040bfe <HAL_NVIC_SetPriority>:
+adding 08040c32 <HAL_SYSTICK_Config>:
+adding 08040c4c <HAL_GPIO_Init>:
+adding 08040f4c <HAL_GPIO_WritePin>:
+adding 08040f7c <__libc_init_array>:
+adding 08040fc4 <_init>:
+adding 08040fd0 <_fini>:
+Pasring ... 0x80401f8: push {r4, lr}
+Pasring ... 0x80401fa: ldr r4, [pc, #20]
+Pasring ... 0x80401fc: ldrb r3, [r4, #0]
+Pasring ... 0x80401fe: cbnz r3, 804020e <__do_global_dtors_aux+0x16>
+Pasring ... 0x8040200: ldr r3, [pc, #16]
+Pasring ... 0x8040202: cbz r3, 804020a <__do_global_dtors_aux+0x12>
+Pasring ... 0x8040204: ldr r0, [pc, #16]
+Pasring ... 0x8040206: b.n 804020a <__do_global_dtors_aux+0x12>
+Pasring ... 0x804020a: movs r3, #1
+Pasring ... 0x804020c: strb r3, [r4, #0]
+Pasring ... 0x804021c: push {r3, lr}
+Pasring ... 0x804021e: ldr r3, [pc, #12]
+Pasring ... 0x8040220: cbz r3, 804022a <frame_dummy+0xe>
+Pasring ... 0x8040222: ldr r1, [pc, #12]
+Pasring ... 0x8040224: ldr r0, [pc, #12]
+Pasring ... 0x8040226: b.n 804022a <frame_dummy+0xe>
+Pasring ... 0x8040238: push {r7, lr}
+Pasring ... 0x804023a: sub sp, #16
+Pasring ... 0x804023c: add r7, sp, #0
+Pasring ... 0x804023e: str r0, [r7, #4]
+Pasring ... 0x8040240: movs r3, #0
+Pasring ... 0x8040242: str r3, [r7, #12]
+Pasring ... 0x8040244: b.n 8040250 <delay+0x18>
+Pasring ... 0x8040246: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804024a: ldr r3, [r7, #12]
+Pasring ... 0x804024c: adds r3, #1
+Pasring ... 0x804024e: str r3, [r7, #12]
+Pasring ... 0x8040250: ldr r2, [r7, #12]
+Pasring ... 0x8040252: ldr r3, [r7, #4]
+Pasring ... 0x8040254: cmp r2, r3
+Pasring ... 0x8040256: bcc.n 8040246 <delay+0xe>
+Pasring ... 0x8040258: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804025c: adds r7, #16
+Pasring ... 0x804025e: mov sp, r7
+Pasring ... 0x8040260: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040268: push {r7, lr}
+Pasring ... 0x804026a: sub sp, #8
+Pasring ... 0x804026c: add r7, sp, #0
+Pasring ... 0x804026e: movs r3, #0
+Pasring ... 0x8040270: strb r3, [r7, #7]
+Pasring ... 0x8040272: movs r3, #0
+Pasring ... 0x8040274: strh r3, [r7, #4]
+Pasring ... 0x8040276: ldr r3, [pc, #272]
+Pasring ... 0x8040278: mov.w r2, #256
+Pasring ... 0x804027c: str r2, [r3, #40]
+Pasring ... 0x804027e: movs r0, #250
+Pasring ... 0x8040280: bl 8040238 <delay>
+Pasring ... 0x8040284: ldr r3, [pc, #256]
+Pasring ... 0x8040286: mov.w r2, #256
+Pasring ... 0x804028a: str r2, [r3, #24]
+Pasring ... 0x804028c: movs r0, #20
+Pasring ... 0x804028e: bl 8040238 <delay>
+Pasring ... 0x8040292: ldr r3, [pc, #244]
+Pasring ... 0x8040294: mov.w r2, #256
+Pasring ... 0x8040298: str r2, [r3, #40]
+Pasring ... 0x804029a: movs r0, #40
+Pasring ... 0x804029c: bl 8040238 <delay>
+Pasring ... 0x80402a0: movs r3, #0
+Pasring ... 0x80402a2: strh r3, [r7, #2]
+Pasring ... 0x80402a4: b.n 804032e <read_data+0xc6>
+Pasring ... 0x80402a6: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80402aa: ldr r3, [pc, #220]
+Pasring ... 0x80402ac: ldr r3, [r3, #16]
+Pasring ... 0x80402ae: lsrs r3, r3, #8
+Pasring ... 0x80402b0: and.w r3, r3, #1
+Pasring ... 0x80402b4: uxtb r2, r3
+Pasring ... 0x80402b6: ldrb r3, [r7, #7]
+Pasring ... 0x80402b8: add r3, r2
+Pasring ... 0x80402ba: strb r3, [r7, #7]
+Pasring ... 0x80402bc: ldrh r3, [r7, #2]
+Pasring ... 0x80402be: cmp r3, #3
+Pasring ... 0x80402c0: bls.n 8040324 <read_data+0xbc>
+Pasring ... 0x80402c2: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80402c6: ldrh r3, [r7, #2]
+Pasring ... 0x80402c8: and.w r3, r3, #1
+Pasring ... 0x80402cc: cmp r3, #0
+Pasring ... 0x80402ce: bne.n 8040324 <read_data+0xbc>
+Pasring ... 0x80402d0: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80402d4: ldrh r3, [r7, #4]
+Pasring ... 0x80402d6: lsrs r3, r3, #3
+Pasring ... 0x80402d8: uxth r3, r3
+Pasring ... 0x80402da: mov r2, r3
+Pasring ... 0x80402dc: ldrh r3, [r7, #4]
+Pasring ... 0x80402de: lsrs r3, r3, #3
+Pasring ... 0x80402e0: uxth r3, r3
+Pasring ... 0x80402e2: mov r1, r3
+Pasring ... 0x80402e4: ldr r3, [pc, #164]
+Pasring ... 0x80402e6: ldrb r3, [r3, r1]
+Pasring ... 0x80402e8: lsls r3, r3, #1
+Pasring ... 0x80402ea: uxtb r1, r3
+Pasring ... 0x80402ec: ldr r3, [pc, #156]
+Pasring ... 0x80402ee: strb r1, [r3, r2]
+Pasring ... 0x80402f0: ldrb r3, [r7, #7]
+Pasring ... 0x80402f2: cmp r3, #6
+Pasring ... 0x80402f4: bls.n 804031a <read_data+0xb2>
+Pasring ... 0x80402f6: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80402fa: ldrh r3, [r7, #4]
+Pasring ... 0x80402fc: lsrs r3, r3, #3
+Pasring ... 0x80402fe: uxth r3, r3
+Pasring ... 0x8040300: mov r1, r3
+Pasring ... 0x8040302: ldrh r3, [r7, #4]
+Pasring ... 0x8040304: lsrs r3, r3, #3
+Pasring ... 0x8040306: uxth r3, r3
+Pasring ... 0x8040308: mov r2, r3
+Pasring ... 0x804030a: ldr r3, [pc, #132]
+Pasring ... 0x804030c: ldr.w r3, [r3, r2, lsl #2]
+Pasring ... 0x8040310: orr.w r3, r3, #1
+Pasring ... 0x8040314: ldr r2, [pc, #120]
+Pasring ... 0x8040316: str.w r3, [r2, r1, lsl #2]
+Pasring ... 0x804031a: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804031e: ldrh r3, [r7, #4]
+Pasring ... 0x8040320: adds r3, #1
+Pasring ... 0x8040322: strh r3, [r7, #4]
+Pasring ... 0x8040324: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040328: ldrh r3, [r7, #2]
+Pasring ... 0x804032a: adds r3, #1
+Pasring ... 0x804032c: strh r3, [r7, #2]
+Pasring ... 0x804032e: ldrh r3, [r7, #2]
+Pasring ... 0x8040330: cmp r3, #82
+Pasring ... 0x8040332: bls.n 80402a6 <read_data+0x3e>
+Pasring ... 0x8040334: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040338: ldrh r3, [r7, #4]
+Pasring ... 0x804033a: cmp r3, #39
+Pasring ... 0x804033c: bls.n 8040372 <read_data+0x10a>
+Pasring ... 0x804033e: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040342: ldr r3, [pc, #72]
+Pasring ... 0x8040344: ldrb r3, [r3, #4]
+Pasring ... 0x8040346: mov r1, r3
+Pasring ... 0x8040348: ldr r3, [pc, #64]
+Pasring ... 0x804034a: ldrb r3, [r3, #0]
+Pasring ... 0x804034c: mov r2, r3
+Pasring ... 0x804034e: ldr r3, [pc, #60]
+Pasring ... 0x8040350: ldrb r3, [r3, #1]
+Pasring ... 0x8040352: add r3, r2
+Pasring ... 0x8040354: ldr r2, [pc, #52]
+Pasring ... 0x8040356: ldrb r2, [r2, #2]
+Pasring ... 0x8040358: add r3, r2
+Pasring ... 0x804035a: ldr r2, [pc, #48]
+Pasring ... 0x804035c: ldrb r2, [r2, #3]
+Pasring ... 0x804035e: add r3, r2
+Pasring ... 0x8040360: uxtb r3, r3
+Pasring ... 0x8040362: cmp r1, r3
+Pasring ... 0x8040364: bne.n 8040372 <read_data+0x10a>
+Pasring ... 0x8040366: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804036a: ldr r3, [pc, #40]
+Pasring ... 0x804036c: movs r2, #1
+Pasring ... 0x804036e: strb r2, [r3, #0]
+Pasring ... 0x8040370: b.n 804037c <read_data+0x114>
+Pasring ... 0x8040372: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040376: ldr r3, [pc, #28]
+Pasring ... 0x8040378: movs r2, #0
+Pasring ... 0x804037a: strb r2, [r3, #0]
+Pasring ... 0x804037c: adds r7, #8
+Pasring ... 0x804037e: mov sp, r7
+Pasring ... 0x8040380: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040398: push {r7, lr}
+Pasring ... 0x804039a: sub sp, #8
+Pasring ... 0x804039c: add r7, sp, #0
+Pasring ... 0x804039e: bl 8040268 <read_data>
+Pasring ... 0x80403a2: ldr r3, [pc, #40]
+Pasring ... 0x80403a4: ldrb r3, [r3, #2]
+Pasring ... 0x80403a6: strh r3, [r7, #6]
+Pasring ... 0x80403a8: ldr r3, [pc, #32]
+Pasring ... 0x80403aa: ldrb r3, [r3, #3]
+Pasring ... 0x80403ac: lsls r3, r3, #8
+Pasring ... 0x80403ae: sxth r2, r3
+Pasring ... 0x80403b0: ldrsh.w r3, [r7, #6]
+Pasring ... 0x80403b4: orrs r3, r2
+Pasring ... 0x80403b6: sxth r3, r3
+Pasring ... 0x80403b8: strh r3, [r7, #6]
+Pasring ... 0x80403ba: ldrh r3, [r7, #6]
+Pasring ... 0x80403bc: mov r0, r3
+Pasring ... 0x80403be: adds r7, #8
+Pasring ... 0x80403c0: mov sp, r7
+Pasring ... 0x80403c2: ldmia.w sp!, {r7, lr}
+Pasring ... 0x80403d0: push {r7, lr}
+Pasring ... 0x80403d2: sub sp, #8
+Pasring ... 0x80403d4: add r7, sp, #0
+Pasring ... 0x80403d6: bl 8040268 <read_data>
+Pasring ... 0x80403da: ldr r3, [pc, #40]
+Pasring ... 0x80403dc: ldrb r3, [r3, #0]
+Pasring ... 0x80403de: strh r3, [r7, #6]
+Pasring ... 0x80403e0: ldr r3, [pc, #32]
+Pasring ... 0x80403e2: ldrb r3, [r3, #1]
+Pasring ... 0x80403e4: lsls r3, r3, #8
+Pasring ... 0x80403e6: sxth r2, r3
+Pasring ... 0x80403e8: ldrsh.w r3, [r7, #6]
+Pasring ... 0x80403ec: orrs r3, r2
+Pasring ... 0x80403ee: sxth r3, r3
+Pasring ... 0x80403f0: strh r3, [r7, #6]
+Pasring ... 0x80403f2: ldrh r3, [r7, #6]
+Pasring ... 0x80403f4: mov r0, r3
+Pasring ... 0x80403f6: adds r7, #8
+Pasring ... 0x80403f8: mov sp, r7
+Pasring ... 0x80403fa: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040408: push {r7, lr}
+Pasring ... 0x804040a: sub sp, #8
+Pasring ... 0x804040c: add r7, sp, #0
+Pasring ... 0x804040e: movs r3, #0
+Pasring ... 0x8040410: str r3, [r7, #4]
+Pasring ... 0x8040412: movs r3, #0
+Pasring ... 0x8040414: str r3, [r7, #0]
+Pasring ... 0x8040416: b.n 8040432 <pulseIn+0x2a>
+Pasring ... 0x8040418: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804041c: ldr r3, [pc, #48]
+Pasring ... 0x804041e: ldr r3, [r3, #16]
+Pasring ... 0x8040420: lsrs r3, r3, #8
+Pasring ... 0x8040422: and.w r3, r3, #2
+Pasring ... 0x8040426: ldr r2, [r7, #4]
+Pasring ... 0x8040428: add r3, r2
+Pasring ... 0x804042a: str r3, [r7, #4]
+Pasring ... 0x804042c: ldr r3, [r7, #0]
+Pasring ... 0x804042e: adds r3, #1
+Pasring ... 0x8040430: str r3, [r7, #0]
+Pasring ... 0x8040432: ldr r3, [r7, #0]
+Pasring ... 0x8040434: cmp.w r3, #1000
+Pasring ... 0x8040438: blt.n 8040418 <pulseIn+0x10>
+Pasring ... 0x804043a: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804043e: ldr r3, [r7, #4]
+Pasring ... 0x8040440: mov r0, r3
+Pasring ... 0x8040442: adds r7, #8
+Pasring ... 0x8040444: mov sp, r7
+Pasring ... 0x8040446: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040454: push {r7, lr}
+Pasring ... 0x8040456: sub sp, #8
+Pasring ... 0x8040458: add r7, sp, #0
+Pasring ... 0x804045a: ldr r3, [pc, #56]
+Pasring ... 0x804045c: mov.w r2, #512
+Pasring ... 0x8040460: str r2, [r3, #24]
+Pasring ... 0x8040462: movs r0, #2
+Pasring ... 0x8040464: bl 8040238 <delay>
+Pasring ... 0x8040468: ldr r3, [pc, #40]
+Pasring ... 0x804046a: mov.w r2, #512
+Pasring ... 0x804046e: str r2, [r3, #40]
+Pasring ... 0x8040470: movs r0, #5
+Pasring ... 0x8040472: bl 8040238 <delay>
+Pasring ... 0x8040476: ldr r3, [pc, #28]
+Pasring ... 0x8040478: mov.w r2, #512
+Pasring ... 0x804047c: str r2, [r3, #24]
+Pasring ... 0x804047e: bl 8040408 <pulseIn>
+Pasring ... 0x8040482: str r0, [r7, #4]
+Pasring ... 0x8040484: ldr r3, [r7, #4]
+Pasring ... 0x8040486: mov r0, r3
+Pasring ... 0x8040488: adds r7, #8
+Pasring ... 0x804048a: mov sp, r7
+Pasring ... 0x804048c: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040498: push {r7, lr}
+Pasring ... 0x804049a: sub sp, #16
+Pasring ... 0x804049c: add r7, sp, #0
+Pasring ... 0x804049e: str r0, [r7, #4]
+Pasring ... 0x80404a0: movs r3, #0
+Pasring ... 0x80404a2: str r3, [r7, #8]
+Pasring ... 0x80404a4: movs r3, #0
+Pasring ... 0x80404a6: str r3, [r7, #12]
+Pasring ... 0x80404a8: b.n 80404c6 <run_ultrasonic+0x2e>
+Pasring ... 0x80404aa: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80404ae: bl 8040454 <getUltrasonicReading>
+Pasring ... 0x80404b2: mov r2, r0
+Pasring ... 0x80404b4: ldr r3, [r7, #4]
+Pasring ... 0x80404b6: sdiv r3, r2, r3
+Pasring ... 0x80404ba: ldr r2, [r7, #8]
+Pasring ... 0x80404bc: add r3, r2
+Pasring ... 0x80404be: str r3, [r7, #8]
+Pasring ... 0x80404c0: ldr r3, [r7, #12]
+Pasring ... 0x80404c2: adds r3, #1
+Pasring ... 0x80404c4: str r3, [r7, #12]
+Pasring ... 0x80404c6: ldr r2, [r7, #12]
+Pasring ... 0x80404c8: ldr r3, [r7, #4]
+Pasring ... 0x80404ca: cmp r2, r3
+Pasring ... 0x80404cc: blt.n 80404aa <run_ultrasonic+0x12>
+Pasring ... 0x80404ce: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80404d2: ldr r3, [r7, #8]
+Pasring ... 0x80404d4: mov r0, r3
+Pasring ... 0x80404d6: adds r7, #16
+Pasring ... 0x80404d8: mov sp, r7
+Pasring ... 0x80404da: ldmia.w sp!, {r7, lr}
+Pasring ... 0x80404e2: push {r7, lr}
+Pasring ... 0x80404e4: sub sp, #16
+Pasring ... 0x80404e6: add r7, sp, #0
+Pasring ... 0x80404e8: str r0, [r7, #4]
+Pasring ... 0x80404ea: movs r3, #0
+Pasring ... 0x80404ec: str r3, [r7, #8]
+Pasring ... 0x80404ee: movs r3, #0
+Pasring ... 0x80404f0: str r3, [r7, #12]
+Pasring ... 0x80404f2: b.n 8040512 <run_temperature+0x30>
+Pasring ... 0x80404f4: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80404f8: bl 8040398 <get_temperature>
+Pasring ... 0x80404fc: mov r3, r0
+Pasring ... 0x80404fe: mov r2, r3
+Pasring ... 0x8040500: ldr r3, [r7, #4]
+Pasring ... 0x8040502: sdiv r3, r2, r3
+Pasring ... 0x8040506: ldr r2, [r7, #8]
+Pasring ... 0x8040508: add r3, r2
+Pasring ... 0x804050a: str r3, [r7, #8]
+Pasring ... 0x804050c: ldr r3, [r7, #12]
+Pasring ... 0x804050e: adds r3, #1
+Pasring ... 0x8040510: str r3, [r7, #12]
+Pasring ... 0x8040512: ldr r2, [r7, #12]
+Pasring ... 0x8040514: ldr r3, [r7, #4]
+Pasring ... 0x8040516: cmp r2, r3
+Pasring ... 0x8040518: blt.n 80404f4 <run_temperature+0x12>
+Pasring ... 0x804051a: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804051e: ldr r3, [r7, #8]
+Pasring ... 0x8040520: mov r0, r3
+Pasring ... 0x8040522: adds r7, #16
+Pasring ... 0x8040524: mov sp, r7
+Pasring ... 0x8040526: ldmia.w sp!, {r7, lr}
+Pasring ... 0x804052e: push {r7, lr}
+Pasring ... 0x8040530: sub sp, #16
+Pasring ... 0x8040532: add r7, sp, #0
+Pasring ... 0x8040534: str r0, [r7, #4]
+Pasring ... 0x8040536: movs r3, #0
+Pasring ... 0x8040538: str r3, [r7, #8]
+Pasring ... 0x804053a: movs r3, #0
+Pasring ... 0x804053c: str r3, [r7, #12]
+Pasring ... 0x804053e: b.n 804055e <run_humidity+0x30>
+Pasring ... 0x8040540: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040544: bl 80403d0 <get_humidity>
+Pasring ... 0x8040548: mov r3, r0
+Pasring ... 0x804054a: mov r2, r3
+Pasring ... 0x804054c: ldr r3, [r7, #4]
+Pasring ... 0x804054e: sdiv r3, r2, r3
+Pasring ... 0x8040552: ldr r2, [r7, #8]
+Pasring ... 0x8040554: add r3, r2
+Pasring ... 0x8040556: str r3, [r7, #8]
+Pasring ... 0x8040558: ldr r3, [r7, #12]
+Pasring ... 0x804055a: adds r3, #1
+Pasring ... 0x804055c: str r3, [r7, #12]
+Pasring ... 0x804055e: ldr r2, [r7, #12]
+Pasring ... 0x8040560: ldr r3, [r7, #4]
+Pasring ... 0x8040562: cmp r2, r3
+Pasring ... 0x8040564: blt.n 8040540 <run_humidity+0x12>
+Pasring ... 0x8040566: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804056a: ldr r3, [r7, #8]
+Pasring ... 0x804056c: mov r0, r3
+Pasring ... 0x804056e: adds r7, #16
+Pasring ... 0x8040570: mov sp, r7
+Pasring ... 0x8040572: ldmia.w sp!, {r7, lr}
+Pasring ... 0x804057a: push {r7, lr}
+Pasring ... 0x804057c: sub sp, #8
+Pasring ... 0x804057e: add r7, sp, #0
+Pasring ... 0x8040580: str r0, [r7, #4]
+Pasring ... 0x8040582: str r1, [r7, #0]
+Pasring ... 0x8040584: b.n 804059e <read_command+0x24>
+Pasring ... 0x8040586: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804058a: ldr r3, [r7, #0]
+Pasring ... 0x804058c: ldrb r2, [r3, #0]
+Pasring ... 0x804058e: ldr r3, [r7, #4]
+Pasring ... 0x8040590: strb r2, [r3, #0]
+Pasring ... 0x8040592: ldr r3, [r7, #4]
+Pasring ... 0x8040594: adds r3, #1
+Pasring ... 0x8040596: str r3, [r7, #4]
+Pasring ... 0x8040598: ldr r3, [r7, #0]
+Pasring ... 0x804059a: adds r3, #1
+Pasring ... 0x804059c: str r3, [r7, #0]
+Pasring ... 0x804059e: ldr r3, [r7, #0]
+Pasring ... 0x80405a0: ldrb r3, [r3, #0]
+Pasring ... 0x80405a2: cmp r3, #58
+Pasring ... 0x80405a4: bne.n 8040586 <read_command+0xc>
+Pasring ... 0x80405a6: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80405aa: adds r7, #8
+Pasring ... 0x80405ac: mov sp, r7
+Pasring ... 0x80405ae: ldmia.w sp!, {r7, lr}
+Pasring ... 0x80405b8: push {r4, r7, lr}
+Pasring ... 0x80405ba: sub sp, #20
+Pasring ... 0x80405bc: add r7, sp, #0
+Pasring ... 0x80405be: ldr r3, [pc, #184]
+Pasring ... 0x80405c0: mov r4, r7
+Pasring ... 0x80405c2: ldmia r3, {r0, r1, r2, r3}
+Pasring ... 0x80405c4: stmia.w r4, {r0, r1, r2, r3}
+Pasring ... 0x80405c8: mov r3, r7
+Pasring ... 0x80405ca: ldr r1, [pc, #176]
+Pasring ... 0x80405cc: mov r0, r3
+Pasring ... 0x80405ce: bl 804057a <read_command>
+Pasring ... 0x80405d2: ldrb r3, [r7, #0]
+Pasring ... 0x80405d4: cmp r3, #116
+Pasring ... 0x80405d6: beq.n 8040600 <process_command+0x48>
+Pasring ... 0x80405d8: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80405dc: cmp r3, #117
+Pasring ... 0x80405de: beq.n 80405ee <process_command+0x36>
+Pasring ... 0x80405e0: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80405e4: cmp r3, #97
+Pasring ... 0x80405e6: beq.n 8040632 <process_command+0x7a>
+Pasring ... 0x80405e8: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80405ec: b.n 8040666 <process_command+0xae>
+Pasring ... 0x80405ee: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80405f2: ldrb r3, [r7, #1]
+Pasring ... 0x80405f4: lsls r3, r3, #8
+Pasring ... 0x80405f6: ldrb r2, [r7, #2]
+Pasring ... 0x80405f8: orrs r3, r2
+Pasring ... 0x80405fa: ldr r2, [pc, #132]
+Pasring ... 0x80405fc: str r3, [r2, #0]
+Pasring ... 0x80405fe: b.n 8040666 <process_command+0xae>
+Pasring ... 0x8040600: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040604: ldrb r3, [r7, #1]
+Pasring ... 0x8040606: lsls r3, r3, #8
+Pasring ... 0x8040608: ldrb r2, [r7, #2]
+Pasring ... 0x804060a: orrs r3, r2
+Pasring ... 0x804060c: ldr r2, [pc, #116]
+Pasring ... 0x804060e: str r3, [r2, #0]
+Pasring ... 0x8040610: ldr r3, [pc, #112]
+Pasring ... 0x8040612: ldr r3, [r3, #0]
+Pasring ... 0x8040614: mov r0, r3
+Pasring ... 0x8040616: bl 8041010 <__SECURE_record_output_data_veneer>
+Pasring ... 0x804061a: ldrb r3, [r7, #4]
+Pasring ... 0x804061c: lsls r3, r3, #8
+Pasring ... 0x804061e: ldrb r2, [r7, #5]
+Pasring ... 0x8040620: orrs r3, r2
+Pasring ... 0x8040622: ldr r2, [pc, #100]
+Pasring ... 0x8040624: str r3, [r2, #0]
+Pasring ... 0x8040626: ldr r3, [pc, #96]
+Pasring ... 0x8040628: ldr r3, [r3, #0]
+Pasring ... 0x804062a: mov r0, r3
+Pasring ... 0x804062c: bl 8041010 <__SECURE_record_output_data_veneer>
+Pasring ... 0x8040630: b.n 8040666 <process_command+0xae>
+Pasring ... 0x8040632: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x8040636: ldrb r3, [r7, #1]
+Pasring ... 0x8040638: lsls r3, r3, #8
+Pasring ... 0x804063a: ldrb r2, [r7, #2]
+Pasring ... 0x804063c: orrs r3, r2
+Pasring ... 0x804063e: ldr r2, [pc, #76]
+Pasring ... 0x8040640: str r3, [r2, #0]
+Pasring ... 0x8040642: ldrb r3, [r7, #4]
+Pasring ... 0x8040644: lsls r3, r3, #8
+Pasring ... 0x8040646: ldrb r2, [r7, #5]
+Pasring ... 0x8040648: orrs r3, r2
+Pasring ... 0x804064a: ldr r2, [pc, #52]
+Pasring ... 0x804064c: str r3, [r2, #0]
+Pasring ... 0x804064e: ldrb r3, [r7, #7]
+Pasring ... 0x8040650: lsls r3, r3, #8
+Pasring ... 0x8040652: ldrb r2, [r7, #8]
+Pasring ... 0x8040654: orrs r3, r2
+Pasring ... 0x8040656: ldr r2, [pc, #44]
+Pasring ... 0x8040658: str r3, [r2, #0]
+Pasring ... 0x804065a: ldrb r3, [r7, #10]
+Pasring ... 0x804065c: lsls r3, r3, #8
+Pasring ... 0x804065e: ldrb r2, [r7, #11]
+Pasring ... 0x8040660: orrs r3, r2
+Pasring ... 0x8040662: ldr r2, [pc, #36]
+Pasring ... 0x8040664: str r3, [r2, #0]
+Pasring ... 0x8040666: ldrb r2, [r7, #0]
+Pasring ... 0x8040668: ldr r3, [pc, #36]
+Pasring ... 0x804066a: strb r2, [r3, #0]
+Pasring ... 0x804066c: adds r7, #20
+Pasring ... 0x804066e: mov sp, r7
+Pasring ... 0x8040670: ldmia.w sp!, {r4, r7, lr}
+Pasring ... 0x8040694: push {r7, lr}
+Pasring ... 0x8040696: sub sp, #8
+Pasring ... 0x8040698: add r7, sp, #0
+Pasring ... 0x804069a: mov r3, r0
+Pasring ... 0x804069c: strb r3, [r7, #7]
+Pasring ... 0x804069e: ldrb r3, [r7, #7]
+Pasring ... 0x80406a0: mvns r3, r3
+Pasring ... 0x80406a2: uxtb r3, r3
+Pasring ... 0x80406a4: mov r0, r3
+Pasring ... 0x80406a6: adds r7, #8
+Pasring ... 0x80406a8: mov sp, r7
+Pasring ... 0x80406aa: ldmia.w sp!, {r7, lr}
+Pasring ... 0x80406b4: push {r7, lr}
+Pasring ... 0x80406b6: add r7, sp, #0
+Pasring ... 0x80406b8: bl 80405b8 <process_command>
+Pasring ... 0x80406bc: ldr r3, [pc, #148]
+Pasring ... 0x80406be: ldrb r3, [r3, #0]
+Pasring ... 0x80406c0: cmp r3, #116
+Pasring ... 0x80406c2: beq.n 80406fa <application+0x46>
+Pasring ... 0x80406c4: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80406c8: cmp r3, #117
+Pasring ... 0x80406ca: beq.n 80406da <application+0x26>
+Pasring ... 0x80406cc: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80406d0: cmp r3, #97
+Pasring ... 0x80406d2: beq.n 804071a <application+0x66>
+Pasring ... 0x80406d4: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80406d8: b.n 8040738 <application+0x84>
+Pasring ... 0x80406da: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80406de: movs r0, #117
+Pasring ... 0x80406e0: bl 8040694 <record_output_data>
+Pasring ... 0x80406e4: mov r2, r0
+Pasring ... 0x80406e6: ldr r3, [pc, #112]
+Pasring ... 0x80406e8: str r2, [r3, #0]
+Pasring ... 0x80406ea: ldr r3, [pc, #112]
+Pasring ... 0x80406ec: ldr r2, [pc, #112]
+Pasring ... 0x80406ee: str r2, [r3, #0]
+Pasring ... 0x80406f0: ldr r3, [pc, #112]
+Pasring ... 0x80406f2: ldr r3, [r3, #0]
+Pasring ... 0x80406f4: ldr r2, [pc, #96]
+Pasring ... 0x80406f6: str r3, [r2, #0]
+Pasring ... 0x80406f8: b.n 8040738 <application+0x84>
+Pasring ... 0x80406fa: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x80406fe: movs r0, #116
+Pasring ... 0x8040700: bl 8040694 <record_output_data>
+Pasring ... 0x8040704: mov r2, r0
+Pasring ... 0x8040706: ldr r3, [pc, #80]
+Pasring ... 0x8040708: str r2, [r3, #0]
+Pasring ... 0x804070a: ldr r3, [pc, #80]
+Pasring ... 0x804070c: ldr r2, [pc, #88]
+Pasring ... 0x804070e: str r2, [r3, #0]
+Pasring ... 0x8040710: ldr r3, [pc, #88]
+Pasring ... 0x8040712: ldr r3, [r3, #0]
+Pasring ... 0x8040714: ldr r2, [pc, #64]
+Pasring ... 0x8040716: str r3, [r2, #0]
+Pasring ... 0x8040718: b.n 8040738 <application+0x84>
+Pasring ... 0x804071a: bl 8041020 <__SECURE_log_cond_br_veneer>
+Pasring ... 0x804071e: movs r0, #97
+Pasring ... 0x8040720: bl 8040694 <record_output_data>
+Pasring ... 0x8040724: mov r2, r0
+Pasring ... 0x8040726: ldr r3, [pc, #48]
+Pasring ... 0x8040728: str r2, [r3, #0]
+Pasring ... 0x804072a: ldr r3, [pc, #48]
+Pasring ... 0x804072c: ldr r2, [pc, #64]
+Pasring ... 0x804072e: str r2, [r3, #0]
+Pasring ... 0x8040730: ldr r3, [pc, #64]
+Pasring ... 0x8040732: ldr r3, [r3, #0]
+Pasring ... 0x8040734: ldr r2, [pc, #32]
+Pasring ... 0x8040736: str r3, [r2, #0]
+Pasring ... 0x8040738: ldr r3, [pc, #32]
+Pasring ... 0x804073a: ldr r3, [r3, #0]
+Pasring ... 0x804073c: ldr r2, [pc, #24]
+Pasring ... 0x804073e: ldr r2, [r2, #0]
+Pasring ... 0x8040740: uxtb r2, r2
+Pasring ... 0x8040742: mov r0, r2
+Pasring ... 0x8040744: mov sl, r3
+Pasring ... 0x8040746: bl 8041040 <__SECURE_log_call_veneer>
+Pasring ... 0x804074a: ldmia.w sp!, {r7, lr}
+Pasring ... 0x8040778: push {r7, lr}
+Pasring ... 0x804077a: sub sp, #32
+Pasring ... 0x804077c: add r7, sp, #0
+Pasring ... 0x804077e: add.w r3, r7, #12
+Pasring ... 0x8040782: movs r2, #0
+Pasring ... 0x8040784: str r2, [r3, #0]
+Pasring ... 0x8040786: str r2, [r3, #4]
+Pasring ... 0x8040788: str r2, [r3, #8]
+Pasring ... 0x804078a: str r2, [r3, #12]
+Pasring ... 0x804078c: str r2, [r3, #16]
+Pasring ... 0x804078e: ldr r3, [pc, #160]
+Pasring ... 0x8040790: ldr r3, [r3, #76]
+Pasring ... 0x8040792: ldr r2, [pc, #156]
+Pasring ... 0x8040794: orr.w r3, r3, #4
+Pasring ... 0x8040798: str r3, [r2, #76]
+Pasring ... 0x804079a: ldr r3, [pc, #148]
+Pasring ... 0x804079c: ldr r3, [r3, #76]
+Pasring ... 0x804079e: and.w r3, r3, #4
+Pasring ... 0x80407a2: str r3, [r7, #8]
+Pasring ... 0x80407a4: ldr r3, [r7, #8]
+Pasring ... 0x80407a6: ldr r3, [pc, #136]
+Pasring ... 0x80407a8: ldr r3, [r3, #76]
+Pasring ... 0x80407aa: ldr r2, [pc, #132]
+Pasring ... 0x80407ac: orr.w r3, r3, #1
+Pasring ... 0x80407b0: str r3, [r2, #76]
+Pasring ... 0x80407b2: ldr r3, [pc, #124]
+Pasring ... 0x80407b4: ldr r3, [r3, #76]
+Pasring ... 0x80407b6: and.w r3, r3, #1
+Pasring ... 0x80407ba: str r3, [r7, #4]
+Pasring ... 0x80407bc: ldr r3, [r7, #4]
+Pasring ... 0x80407be: movs r2, #0
+Pasring ... 0x80407c0: movs r1, #128
+Pasring ... 0x80407c2: ldr r0, [pc, #112]
+Pasring ... 0x80407c4: bl 8040f4c <HAL_GPIO_WritePin>
+Pasring ... 0x80407c8: movs r2, #0
+Pasring ... 0x80407ca: mov.w r1, #512
+Pasring ... 0x80407ce: ldr r0, [pc, #104]
+Pasring ... 0x80407d0: bl 8040f4c <HAL_GPIO_WritePin>
+Pasring ... 0x80407d4: mov.w r3, #8192
+Pasring ... 0x80407d8: str r3, [r7, #12]
+Pasring ... 0x80407da: movs r3, #0
+Pasring ... 0x80407dc: str r3, [r7, #16]
+Pasring ... 0x80407de: movs r3, #0
+Pasring ... 0x80407e0: str r3, [r7, #20]
+Pasring ... 0x80407e2: add.w r3, r7, #12
+Pasring ... 0x80407e6: mov r1, r3
+Pasring ... 0x80407e8: ldr r0, [pc, #72]
+Pasring ... 0x80407ea: bl 8040c4c <HAL_GPIO_Init>
+Pasring ... 0x80407ee: movs r3, #128
+Pasring ... 0x80407f0: str r3, [r7, #12]
+Pasring ... 0x80407f2: movs r3, #1
+Pasring ... 0x80407f4: str r3, [r7, #16]
+Pasring ... 0x80407f6: movs r3, #0
+Pasring ... 0x80407f8: str r3, [r7, #20]
+Pasring ... 0x80407fa: movs r3, #0
+Pasring ... 0x80407fc: str r3, [r7, #24]
+Pasring ... 0x80407fe: add.w r3, r7, #12
+Pasring ... 0x8040802: mov r1, r3
+Pasring ... 0x8040804: ldr r0, [pc, #44]
+Pasring ... 0x8040806: bl 8040c4c <HAL_GPIO_Init>
+Pasring ... 0x804080a: mov.w r3, #512
+Pasring ... 0x804080e: str r3, [r7, #12]
+Pasring ... 0x8040810: movs r3, #1
+Pasring ... 0x8040812: str r3, [r7, #16]
+Pasring ... 0x8040814: movs r3, #0
+Pasring ... 0x8040816: str r3, [r7, #20]
+Pasring ... 0x8040818: movs r3, #0
+Pasring ... 0x804081a: str r3, [r7, #24]
+Pasring ... 0x804081c: add.w r3, r7, #12
+Pasring ... 0x8040820: mov r1, r3
+Pasring ... 0x8040822: ldr r0, [pc, #20]
+Pasring ... 0x8040824: bl 8040c4c <HAL_GPIO_Init>
+Pasring ... 0x804082a: adds r7, #32
+Pasring ... 0x804082c: mov sp, r7
+Pasring ... 0x804083c: push {r7, lr}
+Pasring ... 0x804083e: add r7, sp, #0
+Pasring ... 0x8040840: movs r2, #1
+Pasring ... 0x8040842: mov.w r1, #512
+Pasring ... 0x8040846: ldr r0, [pc, #12]
+Pasring ... 0x8040848: bl 8040f4c <HAL_GPIO_WritePin>
+Pasring ... 0x804084c: bl 80408ac <Error_Handler>
+Pasring ... 0x8040858: push {r7, lr}
+Pasring ... 0x804085a: add r7, sp, #0
+Pasring ... 0x804085c: movs r2, #1
+Pasring ... 0x804085e: mov.w r1, #512
+Pasring ... 0x8040862: ldr r0, [pc, #12]
+Pasring ... 0x8040864: bl 8040f4c <HAL_GPIO_WritePin>
+Pasring ... 0x8040868: bl 80408ac <Error_Handler>
+Pasring ... 0x8040874: push {r7, lr}
+Pasring ... 0x8040876: add r7, sp, #0
+Pasring ... 0x8040878: bl 80409ae <HAL_Init>
+Pasring ... 0x804087c: bl 8040778 <MX_GPIO_Init>
+Pasring ... 0x8040880: ldr r1, [pc, #28]
+Pasring ... 0x8040882: movs r0, #0
+Pasring ... 0x8040884: bl 8040ff0 <__SECURE_RegisterCallback_veneer>
+Pasring ... 0x8040888: ldr r1, [pc, #24]
+Pasring ... 0x804088a: movs r0, #1
+Pasring ... 0x804088c: bl 8040ff0 <__SECURE_RegisterCallback_veneer>
+Pasring ... 0x8040890: ldr r1, [pc, #20]
+Pasring ... 0x8040892: movs r0, #2
+Pasring ... 0x8040894: bl 8040ff0 <__SECURE_RegisterCallback_veneer>
+Pasring ... 0x8040898: bl 8040fe0 <__SECURE_run_attestation_wait_mode_veneer>
+Pasring ... 0x80408ac: push {r7}
+Pasring ... 0x80408ae: add r7, sp, #0
+Pasring ... 0x80408b0: cpsid i
+Pasring ... 0x80408b8: push {r7}
+Pasring ... 0x80408ba: sub sp, #12
+Pasring ... 0x80408bc: add r7, sp, #0
+Pasring ... 0x80408be: ldr r3, [pc, #60]
+Pasring ... 0x80408c0: ldr r3, [r3, #96]
+Pasring ... 0x80408c2: ldr r2, [pc, #56]
+Pasring ... 0x80408c4: orr.w r3, r3, #1
+Pasring ... 0x80408c8: str r3, [r2, #96]
+Pasring ... 0x80408ca: ldr r3, [pc, #48]
+Pasring ... 0x80408cc: ldr r3, [r3, #96]
+Pasring ... 0x80408ce: and.w r3, r3, #1
+Pasring ... 0x80408d2: str r3, [r7, #4]
+Pasring ... 0x80408d4: ldr r3, [r7, #4]
+Pasring ... 0x80408d6: ldr r3, [pc, #36]
+Pasring ... 0x80408d8: ldr r3, [r3, #88]
+Pasring ... 0x80408da: ldr r2, [pc, #32]
+Pasring ... 0x80408dc: orr.w r3, r3, #268435456
+Pasring ... 0x80408e0: str r3, [r2, #88]
+Pasring ... 0x80408e2: ldr r3, [pc, #24]
+Pasring ... 0x80408e4: ldr r3, [r3, #88]
+Pasring ... 0x80408e6: and.w r3, r3, #268435456
+Pasring ... 0x80408ea: str r3, [r7, #0]
+Pasring ... 0x80408ec: ldr r3, [r7, #0]
+Pasring ... 0x80408f0: adds r7, #12
+Pasring ... 0x80408f2: mov sp, r7
+Pasring ... 0x80408f4: ldr.w r7, [sp], #4
+Pasring ... 0x8040900: push {r7}
+Pasring ... 0x8040902: add r7, sp, #0
+Pasring ... 0x8040906: push {r7}
+Pasring ... 0x8040908: add r7, sp, #0
+Pasring ... 0x804090c: push {r7}
+Pasring ... 0x804090e: add r7, sp, #0
+Pasring ... 0x8040912: mov sp, r7
+Pasring ... 0x8040914: ldr.w r7, [sp], #4
+Pasring ... 0x804091a: push {r7}
+Pasring ... 0x804091c: add r7, sp, #0
+Pasring ... 0x8040920: mov sp, r7
+Pasring ... 0x8040922: ldr.w r7, [sp], #4
+Pasring ... 0x8040928: push {r7, lr}
+Pasring ... 0x804092a: add r7, sp, #0
+Pasring ... 0x804092c: bl 8040a5c <HAL_IncTick>
+Pasring ... 0x8040934: push {r7}
+Pasring ... 0x8040936: add r7, sp, #0
+Pasring ... 0x804093a: mov sp, r7
+Pasring ... 0x804093c: ldr.w r7, [sp], #4
+Pasring ... 0x8040944: push {r7, lr}
+Pasring ... 0x8040946: add r7, sp, #0
+Pasring ... 0x8040948: bl 8041030 <__SECURE_SystemCoreClockUpdate_veneer>
+Pasring ... 0x804094c: mov r3, r0
+Pasring ... 0x804094e: ldr r2, [pc, #8]
+Pasring ... 0x8040950: str r3, [r2, #0]
+Pasring ... 0x804095c: ldr.w sp, [pc, #52]
+Pasring ... 0x8040960: bl 8040934 <SystemInit>
+Pasring ... 0x8040964: movs r1, #0
+Pasring ... 0x8040968: ldr r3, [pc, #44]
+Pasring ... 0x804096a: ldr r3, [r3, r1]
+Pasring ... 0x804096c: str r3, [r0, r1]
+Pasring ... 0x8040970: ldr r0, [pc, #40]
+Pasring ... 0x8040972: ldr r3, [pc, #44]
+Pasring ... 0x8040974: adds r2, r0, r1
+Pasring ... 0x8040976: cmp r2, r3
+Pasring ... 0x8040978: bcc.n 8040968 <CopyDataInit>
+Pasring ... 0x804097a: ldr r2, [pc, #40]
+Pasring ... 0x804097e: movs r3, #0
+Pasring ... 0x8040984: ldr r3, [pc, #32]
+Pasring ... 0x8040986: cmp r2, r3
+Pasring ... 0x8040988: bcc.n 804097e <FillZerobss>
+Pasring ... 0x804098a: bl 8040f7c <__libc_init_array>
+Pasring ... 0x80409ae: push {r7, lr}
+Pasring ... 0x80409b0: sub sp, #8
+Pasring ... 0x80409b2: add r7, sp, #0
+Pasring ... 0x80409b4: movs r3, #0
+Pasring ... 0x80409b6: strb r3, [r7, #7]
+Pasring ... 0x80409b8: movs r0, #4
+Pasring ... 0x80409ba: bl 8040be8 <HAL_NVIC_SetPriorityGrouping>
+Pasring ... 0x80409be: bl 8040944 <SystemCoreClockUpdate>
+Pasring ... 0x80409c2: movs r0, #7
+Pasring ... 0x80409c4: bl 80409e4 <HAL_InitTick>
+Pasring ... 0x80409c8: mov r3, r0
+Pasring ... 0x80409ca: cmp r3, #0
+Pasring ... 0x80409cc: beq.n 80409d4 <HAL_Init+0x26>
+Pasring ... 0x80409ce: movs r3, #1
+Pasring ... 0x80409d0: strb r3, [r7, #7]
+Pasring ... 0x80409d2: b.n 80409d8 <HAL_Init+0x2a>
+Pasring ... 0x80409d4: bl 80408b8 <HAL_MspInit>
+Pasring ... 0x80409d8: ldrb r3, [r7, #7]
+Pasring ... 0x80409da: mov r0, r3
+Pasring ... 0x80409dc: adds r7, #8
+Pasring ... 0x80409de: mov sp, r7
+Pasring ... 0x80409e4: push {r7, lr}
+Pasring ... 0x80409e6: sub sp, #16
+Pasring ... 0x80409e8: add r7, sp, #0
+Pasring ... 0x80409ea: str r0, [r7, #4]
+Pasring ... 0x80409ec: movs r3, #0
+Pasring ... 0x80409ee: strb r3, [r7, #15]
+Pasring ... 0x80409f0: ldr r3, [pc, #92]
+Pasring ... 0x80409f2: ldrb r3, [r3, #0]
+Pasring ... 0x80409f4: cmp r3, #0
+Pasring ... 0x80409f6: beq.n 8040a40 <HAL_InitTick+0x5c>
+Pasring ... 0x80409f8: ldr r3, [pc, #88]
+Pasring ... 0x80409fa: ldr r2, [r3, #0]
+Pasring ... 0x80409fc: ldr r3, [pc, #80]
+Pasring ... 0x80409fe: ldrb r3, [r3, #0]
+Pasring ... 0x8040a00: mov r1, r3
+Pasring ... 0x8040a02: mov.w r3, #1000
+Pasring ... 0x8040a06: udiv r3, r3, r1
+Pasring ... 0x8040a0a: udiv r3, r2, r3
+Pasring ... 0x8040a0e: mov r0, r3
+Pasring ... 0x8040a10: bl 8040c32 <HAL_SYSTICK_Config>
+Pasring ... 0x8040a14: mov r3, r0
+Pasring ... 0x8040a16: cmp r3, #0
+Pasring ... 0x8040a18: bne.n 8040a3a <HAL_InitTick+0x56>
+Pasring ... 0x8040a1a: ldr r3, [r7, #4]
+Pasring ... 0x8040a1c: cmp r3, #7
+Pasring ... 0x8040a1e: bhi.n 8040a34 <HAL_InitTick+0x50>
+Pasring ... 0x8040a20: movs r2, #0
+Pasring ... 0x8040a22: ldr r1, [r7, #4]
+Pasring ... 0x8040a24: mov.w r0, #4294967295
+Pasring ... 0x8040a28: bl 8040bfe <HAL_NVIC_SetPriority>
+Pasring ... 0x8040a2c: ldr r2, [pc, #40]
+Pasring ... 0x8040a2e: ldr r3, [r7, #4]
+Pasring ... 0x8040a30: str r3, [r2, #0]
+Pasring ... 0x8040a32: b.n 8040a44 <HAL_InitTick+0x60>
+Pasring ... 0x8040a34: movs r3, #1
+Pasring ... 0x8040a36: strb r3, [r7, #15]
+Pasring ... 0x8040a38: b.n 8040a44 <HAL_InitTick+0x60>
+Pasring ... 0x8040a3a: movs r3, #1
+Pasring ... 0x8040a3c: strb r3, [r7, #15]
+Pasring ... 0x8040a3e: b.n 8040a44 <HAL_InitTick+0x60>
+Pasring ... 0x8040a40: movs r3, #1
+Pasring ... 0x8040a42: strb r3, [r7, #15]
+Pasring ... 0x8040a44: ldrb r3, [r7, #15]
+Pasring ... 0x8040a46: mov r0, r3
+Pasring ... 0x8040a48: adds r7, #16
+Pasring ... 0x8040a4a: mov sp, r7
+Pasring ... 0x8040a5c: push {r7}
+Pasring ... 0x8040a5e: add r7, sp, #0
+Pasring ... 0x8040a60: ldr r3, [pc, #24]
+Pasring ... 0x8040a62: ldrb r3, [r3, #0]
+Pasring ... 0x8040a64: mov r2, r3
+Pasring ... 0x8040a66: ldr r3, [pc, #24]
+Pasring ... 0x8040a68: ldr r3, [r3, #0]
+Pasring ... 0x8040a6a: add r3, r2
+Pasring ... 0x8040a6c: ldr r2, [pc, #16]
+Pasring ... 0x8040a6e: str r3, [r2, #0]
+Pasring ... 0x8040a72: mov sp, r7
+Pasring ... 0x8040a74: ldr.w r7, [sp], #4
+Pasring ... 0x8040a84: push {r7}
+Pasring ... 0x8040a86: sub sp, #20
+Pasring ... 0x8040a88: add r7, sp, #0
+Pasring ... 0x8040a8a: str r0, [r7, #4]
+Pasring ... 0x8040a8c: ldr r3, [r7, #4]
+Pasring ... 0x8040a8e: and.w r3, r3, #7
+Pasring ... 0x8040a92: str r3, [r7, #12]
+Pasring ... 0x8040a94: ldr r3, [pc, #48]
+Pasring ... 0x8040a96: ldr r3, [r3, #12]
+Pasring ... 0x8040a98: str r3, [r7, #8]
+Pasring ... 0x8040a9a: ldr r2, [r7, #8]
+Pasring ... 0x8040a9c: movw r3, #63743
+Pasring ... 0x8040aa0: ands r3, r2
+Pasring ... 0x8040aa2: str r3, [r7, #8]
+Pasring ... 0x8040aa4: ldr r3, [r7, #12]
+Pasring ... 0x8040aa6: lsls r2, r3, #8
+Pasring ... 0x8040aa8: ldr r3, [r7, #8]
+Pasring ... 0x8040aaa: orrs r3, r2
+Pasring ... 0x8040aac: orr.w r3, r3, #100139008
+Pasring ... 0x8040ab0: orr.w r3, r3, #131072
+Pasring ... 0x8040ab4: str r3, [r7, #8]
+Pasring ... 0x8040ab6: ldr r2, [pc, #16]
+Pasring ... 0x8040ab8: ldr r3, [r7, #8]
+Pasring ... 0x8040aba: str r3, [r2, #12]
+Pasring ... 0x8040abe: adds r7, #20
+Pasring ... 0x8040ac0: mov sp, r7
+Pasring ... 0x8040ac2: ldr.w r7, [sp], #4
+Pasring ... 0x8040acc: push {r7}
+Pasring ... 0x8040ace: add r7, sp, #0
+Pasring ... 0x8040ad0: ldr r3, [pc, #16]
+Pasring ... 0x8040ad2: ldr r3, [r3, #12]
+Pasring ... 0x8040ad4: lsrs r3, r3, #8
+Pasring ... 0x8040ad6: and.w r3, r3, #7
+Pasring ... 0x8040ada: mov r0, r3
+Pasring ... 0x8040adc: mov sp, r7
+Pasring ... 0x8040ade: ldr.w r7, [sp], #4
+Pasring ... 0x8040ae8: push {r7}
+Pasring ... 0x8040aea: sub sp, #12
+Pasring ... 0x8040aec: add r7, sp, #0
+Pasring ... 0x8040aee: mov r3, r0
+Pasring ... 0x8040af0: str r1, [r7, #0]
+Pasring ... 0x8040af2: strb r3, [r7, #7]
+Pasring ... 0x8040af4: ldrsb.w r3, [r7, #7]
+Pasring ... 0x8040af8: cmp r3, #0
+Pasring ... 0x8040afa: blt.n 8040b12 <__NVIC_SetPriority+0x2a>
+Pasring ... 0x8040afc: ldr r3, [r7, #0]
+Pasring ... 0x8040afe: uxtb r2, r3
+Pasring ... 0x8040b00: ldr r1, [pc, #48]
+Pasring ... 0x8040b02: ldrsb.w r3, [r7, #7]
+Pasring ... 0x8040b06: lsls r2, r2, #5
+Pasring ... 0x8040b08: uxtb r2, r2
+Pasring ... 0x8040b0a: add r3, r1
+Pasring ... 0x8040b0c: strb.w r2, [r3, #768]
+Pasring ... 0x8040b10: b.n 8040b28 <__NVIC_SetPriority+0x40>
+Pasring ... 0x8040b12: ldr r3, [r7, #0]
+Pasring ... 0x8040b14: uxtb r2, r3
+Pasring ... 0x8040b16: ldr r1, [pc, #32]
+Pasring ... 0x8040b18: ldrb r3, [r7, #7]
+Pasring ... 0x8040b1a: and.w r3, r3, #15
+Pasring ... 0x8040b1e: subs r3, #4
+Pasring ... 0x8040b20: lsls r2, r2, #5
+Pasring ... 0x8040b22: uxtb r2, r2
+Pasring ... 0x8040b24: add r3, r1
+Pasring ... 0x8040b26: strb r2, [r3, #24]
+Pasring ... 0x8040b2a: adds r7, #12
+Pasring ... 0x8040b2c: mov sp, r7
+Pasring ... 0x8040b2e: ldr.w r7, [sp], #4
+Pasring ... 0x8040b3c: push {r7}
+Pasring ... 0x8040b3e: sub sp, #36
+Pasring ... 0x8040b40: add r7, sp, #0
+Pasring ... 0x8040b42: str r0, [r7, #12]
+Pasring ... 0x8040b44: str r1, [r7, #8]
+Pasring ... 0x8040b46: str r2, [r7, #4]
+Pasring ... 0x8040b48: ldr r3, [r7, #12]
+Pasring ... 0x8040b4a: and.w r3, r3, #7
+Pasring ... 0x8040b4e: str r3, [r7, #28]
+Pasring ... 0x8040b50: ldr r3, [r7, #28]
+Pasring ... 0x8040b52: rsb r3, r3, #7
+Pasring ... 0x8040b56: cmp r3, #3
+Pasring ... 0x8040b58: it cs
+Pasring ... 0x8040b5a: movcs r3, #3
+Pasring ... 0x8040b5c: str r3, [r7, #24]
+Pasring ... 0x8040b5e: ldr r3, [r7, #28]
+Pasring ... 0x8040b60: adds r3, #3
+Pasring ... 0x8040b62: cmp r3, #6
+Pasring ... 0x8040b64: bls.n 8040b6c <NVIC_EncodePriority+0x30>
+Pasring ... 0x8040b66: ldr r3, [r7, #28]
+Pasring ... 0x8040b68: subs r3, #4
+Pasring ... 0x8040b6a: b.n 8040b6e <NVIC_EncodePriority+0x32>
+Pasring ... 0x8040b6c: movs r3, #0
+Pasring ... 0x8040b6e: str r3, [r7, #20]
+Pasring ... 0x8040b70: mov.w r2, #4294967295
+Pasring ... 0x8040b74: ldr r3, [r7, #24]
+Pasring ... 0x8040b76: lsl.w r3, r2, r3
+Pasring ... 0x8040b7a: mvns r2, r3
+Pasring ... 0x8040b7c: ldr r3, [r7, #8]
+Pasring ... 0x8040b7e: ands r2, r3
+Pasring ... 0x8040b80: ldr r3, [r7, #20]
+Pasring ... 0x8040b82: lsls r2, r3
+Pasring ... 0x8040b84: mov.w r1, #4294967295
+Pasring ... 0x8040b88: ldr r3, [r7, #20]
+Pasring ... 0x8040b8a: lsl.w r3, r1, r3
+Pasring ... 0x8040b8e: mvns r1, r3
+Pasring ... 0x8040b90: ldr r3, [r7, #4]
+Pasring ... 0x8040b92: ands r3, r1
+Pasring ... 0x8040b94: orrs r3, r2
+Pasring ... 0x8040b96: mov r0, r3
+Pasring ... 0x8040b98: adds r7, #36
+Pasring ... 0x8040b9a: mov sp, r7
+Pasring ... 0x8040b9c: ldr.w r7, [sp], #4
+Pasring ... 0x8040ba4: push {r7, lr}
+Pasring ... 0x8040ba6: sub sp, #8
+Pasring ... 0x8040ba8: add r7, sp, #0
+Pasring ... 0x8040baa: str r0, [r7, #4]
+Pasring ... 0x8040bac: ldr r3, [r7, #4]
+Pasring ... 0x8040bae: subs r3, #1
+Pasring ... 0x8040bb0: cmp.w r3, #16777216
+Pasring ... 0x8040bb4: bcc.n 8040bba <SysTick_Config+0x16>
+Pasring ... 0x8040bb6: movs r3, #1
+Pasring ... 0x8040bb8: b.n 8040bda <SysTick_Config+0x36>
+Pasring ... 0x8040bba: ldr r2, [pc, #40]
+Pasring ... 0x8040bbc: ldr r3, [r7, #4]
+Pasring ... 0x8040bbe: subs r3, #1
+Pasring ... 0x8040bc0: str r3, [r2, #4]
+Pasring ... 0x8040bc2: movs r1, #7
+Pasring ... 0x8040bc4: mov.w r0, #4294967295
+Pasring ... 0x8040bc8: bl 8040ae8 <__NVIC_SetPriority>
+Pasring ... 0x8040bcc: ldr r3, [pc, #20]
+Pasring ... 0x8040bce: movs r2, #0
+Pasring ... 0x8040bd0: str r2, [r3, #8]
+Pasring ... 0x8040bd2: ldr r3, [pc, #16]
+Pasring ... 0x8040bd4: movs r2, #7
+Pasring ... 0x8040bd6: str r2, [r3, #0]
+Pasring ... 0x8040bd8: movs r3, #0
+Pasring ... 0x8040bda: mov r0, r3
+Pasring ... 0x8040bdc: adds r7, #8
+Pasring ... 0x8040bde: mov sp, r7
+Pasring ... 0x8040be8: push {r7, lr}
+Pasring ... 0x8040bea: sub sp, #8
+Pasring ... 0x8040bec: add r7, sp, #0
+Pasring ... 0x8040bee: str r0, [r7, #4]
+Pasring ... 0x8040bf0: ldr r0, [r7, #4]
+Pasring ... 0x8040bf2: bl 8040a84 <__NVIC_SetPriorityGrouping>
+Pasring ... 0x8040bf8: adds r7, #8
+Pasring ... 0x8040bfa: mov sp, r7
+Pasring ... 0x8040bfe: push {r7, lr}
+Pasring ... 0x8040c00: sub sp, #24
+Pasring ... 0x8040c02: add r7, sp, #0
+Pasring ... 0x8040c04: mov r3, r0
+Pasring ... 0x8040c06: str r1, [r7, #8]
+Pasring ... 0x8040c08: str r2, [r7, #4]
+Pasring ... 0x8040c0a: strb r3, [r7, #15]
+Pasring ... 0x8040c0c: bl 8040acc <__NVIC_GetPriorityGrouping>
+Pasring ... 0x8040c10: str r0, [r7, #20]
+Pasring ... 0x8040c12: ldr r2, [r7, #4]
+Pasring ... 0x8040c14: ldr r1, [r7, #8]
+Pasring ... 0x8040c16: ldr r0, [r7, #20]
+Pasring ... 0x8040c18: bl 8040b3c <NVIC_EncodePriority>
+Pasring ... 0x8040c1c: mov r2, r0
+Pasring ... 0x8040c1e: ldrsb.w r3, [r7, #15]
+Pasring ... 0x8040c22: mov r1, r2
+Pasring ... 0x8040c24: mov r0, r3
+Pasring ... 0x8040c26: bl 8040ae8 <__NVIC_SetPriority>
+Pasring ... 0x8040c2c: adds r7, #24
+Pasring ... 0x8040c2e: mov sp, r7
+Pasring ... 0x8040c32: push {r7, lr}
+Pasring ... 0x8040c34: sub sp, #8
+Pasring ... 0x8040c36: add r7, sp, #0
+Pasring ... 0x8040c38: str r0, [r7, #4]
+Pasring ... 0x8040c3a: ldr r0, [r7, #4]
+Pasring ... 0x8040c3c: bl 8040ba4 <SysTick_Config>
+Pasring ... 0x8040c40: mov r3, r0
+Pasring ... 0x8040c42: mov r0, r3
+Pasring ... 0x8040c44: adds r7, #8
+Pasring ... 0x8040c46: mov sp, r7
+Pasring ... 0x8040c4c: push {r7}
+Pasring ... 0x8040c4e: sub sp, #28
+Pasring ... 0x8040c50: add r7, sp, #0
+Pasring ... 0x8040c52: str r0, [r7, #4]
+Pasring ... 0x8040c54: str r1, [r7, #0]
+Pasring ... 0x8040c56: movs r3, #0
+Pasring ... 0x8040c58: str r3, [r7, #20]
+Pasring ... 0x8040c5a: b.n 8040f0e <HAL_GPIO_Init+0x2c2>
+Pasring ... 0x8040c5c: ldr r3, [r7, #0]
+Pasring ... 0x8040c5e: ldr r2, [r3, #0]
+Pasring ... 0x8040c60: movs r1, #1
+Pasring ... 0x8040c62: ldr r3, [r7, #20]
+Pasring ... 0x8040c64: lsl.w r3, r1, r3
+Pasring ... 0x8040c68: ands r3, r2
+Pasring ... 0x8040c6a: str r3, [r7, #12]
+Pasring ... 0x8040c6c: ldr r3, [r7, #12]
+Pasring ... 0x8040c6e: cmp r3, #0
+Pasring ... 0x8040c70: beq.w 8040f08 <HAL_GPIO_Init+0x2bc>
+Pasring ... 0x8040c74: ldr r3, [r7, #0]
+Pasring ... 0x8040c76: ldr r3, [r3, #4]
+Pasring ... 0x8040c78: cmp r3, #1
+Pasring ... 0x8040c7a: beq.n 8040c94 <HAL_GPIO_Init+0x48>
+Pasring ... 0x8040c7c: ldr r3, [r7, #0]
+Pasring ... 0x8040c7e: ldr r3, [r3, #4]
+Pasring ... 0x8040c80: cmp r3, #2
+Pasring ... 0x8040c82: beq.n 8040c94 <HAL_GPIO_Init+0x48>
+Pasring ... 0x8040c84: ldr r3, [r7, #0]
+Pasring ... 0x8040c86: ldr r3, [r3, #4]
+Pasring ... 0x8040c88: cmp r3, #17
+Pasring ... 0x8040c8a: beq.n 8040c94 <HAL_GPIO_Init+0x48>
+Pasring ... 0x8040c8c: ldr r3, [r7, #0]
+Pasring ... 0x8040c8e: ldr r3, [r3, #4]
+Pasring ... 0x8040c90: cmp r3, #18
+Pasring ... 0x8040c92: bne.n 8040cf6 <HAL_GPIO_Init+0xaa>
+Pasring ... 0x8040c94: ldr r3, [r7, #4]
+Pasring ... 0x8040c96: ldr r3, [r3, #8]
+Pasring ... 0x8040c98: str r3, [r7, #16]
+Pasring ... 0x8040c9a: ldr r3, [r7, #20]
+Pasring ... 0x8040c9c: lsls r3, r3, #1
+Pasring ... 0x8040c9e: movs r2, #3
+Pasring ... 0x8040ca0: lsl.w r3, r2, r3
+Pasring ... 0x8040ca4: mvns r3, r3
+Pasring ... 0x8040ca6: ldr r2, [r7, #16]
+Pasring ... 0x8040ca8: ands r3, r2
+Pasring ... 0x8040caa: str r3, [r7, #16]
+Pasring ... 0x8040cac: ldr r3, [r7, #0]
+Pasring ... 0x8040cae: ldr r2, [r3, #12]
+Pasring ... 0x8040cb0: ldr r3, [r7, #20]
+Pasring ... 0x8040cb2: lsls r3, r3, #1
+Pasring ... 0x8040cb4: lsl.w r3, r2, r3
+Pasring ... 0x8040cb8: ldr r2, [r7, #16]
+Pasring ... 0x8040cba: orrs r3, r2
+Pasring ... 0x8040cbc: str r3, [r7, #16]
+Pasring ... 0x8040cbe: ldr r3, [r7, #4]
+Pasring ... 0x8040cc0: ldr r2, [r7, #16]
+Pasring ... 0x8040cc2: str r2, [r3, #8]
+Pasring ... 0x8040cc4: ldr r3, [r7, #4]
+Pasring ... 0x8040cc6: ldr r3, [r3, #4]
+Pasring ... 0x8040cc8: str r3, [r7, #16]
+Pasring ... 0x8040cca: movs r2, #1
+Pasring ... 0x8040ccc: ldr r3, [r7, #20]
+Pasring ... 0x8040cce: lsl.w r3, r2, r3
+Pasring ... 0x8040cd2: mvns r3, r3
+Pasring ... 0x8040cd4: ldr r2, [r7, #16]
+Pasring ... 0x8040cd6: ands r3, r2
+Pasring ... 0x8040cd8: str r3, [r7, #16]
+Pasring ... 0x8040cda: ldr r3, [r7, #0]
+Pasring ... 0x8040cdc: ldr r3, [r3, #4]
+Pasring ... 0x8040cde: lsrs r3, r3, #4
+Pasring ... 0x8040ce0: and.w r2, r3, #1
+Pasring ... 0x8040ce4: ldr r3, [r7, #20]
+Pasring ... 0x8040ce6: lsl.w r3, r2, r3
+Pasring ... 0x8040cea: ldr r2, [r7, #16]
+Pasring ... 0x8040cec: orrs r3, r2
+Pasring ... 0x8040cee: str r3, [r7, #16]
+Pasring ... 0x8040cf0: ldr r3, [r7, #4]
+Pasring ... 0x8040cf2: ldr r2, [r7, #16]
+Pasring ... 0x8040cf4: str r2, [r3, #4]
+Pasring ... 0x8040cf6: ldr r3, [r7, #4]
+Pasring ... 0x8040cf8: ldr r3, [r3, #12]
+Pasring ... 0x8040cfa: str r3, [r7, #16]
+Pasring ... 0x8040cfc: ldr r3, [r7, #20]
+Pasring ... 0x8040cfe: lsls r3, r3, #1
+Pasring ... 0x8040d00: movs r2, #3
+Pasring ... 0x8040d02: lsl.w r3, r2, r3
+Pasring ... 0x8040d06: mvns r3, r3
+Pasring ... 0x8040d08: ldr r2, [r7, #16]
+Pasring ... 0x8040d0a: ands r3, r2
+Pasring ... 0x8040d0c: str r3, [r7, #16]
+Pasring ... 0x8040d0e: ldr r3, [r7, #0]
+Pasring ... 0x8040d10: ldr r2, [r3, #8]
+Pasring ... 0x8040d12: ldr r3, [r7, #20]
+Pasring ... 0x8040d14: lsls r3, r3, #1
+Pasring ... 0x8040d16: lsl.w r3, r2, r3
+Pasring ... 0x8040d1a: ldr r2, [r7, #16]
+Pasring ... 0x8040d1c: orrs r3, r2
+Pasring ... 0x8040d1e: str r3, [r7, #16]
+Pasring ... 0x8040d20: ldr r3, [r7, #4]
+Pasring ... 0x8040d22: ldr r2, [r7, #16]
+Pasring ... 0x8040d24: str r2, [r3, #12]
+Pasring ... 0x8040d26: ldr r3, [r7, #0]
+Pasring ... 0x8040d28: ldr r3, [r3, #4]
+Pasring ... 0x8040d2a: cmp r3, #2
+Pasring ... 0x8040d2c: beq.n 8040d36 <HAL_GPIO_Init+0xea>
+Pasring ... 0x8040d2e: ldr r3, [r7, #0]
+Pasring ... 0x8040d30: ldr r3, [r3, #4]
+Pasring ... 0x8040d32: cmp r3, #18
+Pasring ... 0x8040d34: bne.n 8040d7e <HAL_GPIO_Init+0x132>
+Pasring ... 0x8040d36: ldr r3, [r7, #20]
+Pasring ... 0x8040d38: lsrs r2, r3, #3
+Pasring ... 0x8040d3a: ldr r3, [r7, #4]
+Pasring ... 0x8040d3c: adds r2, #8
+Pasring ... 0x8040d3e: ldr.w r3, [r3, r2, lsl #2]
+Pasring ... 0x8040d42: str r3, [r7, #16]
+Pasring ... 0x8040d44: ldr r3, [r7, #20]
+Pasring ... 0x8040d46: and.w r3, r3, #7
+Pasring ... 0x8040d4a: lsls r3, r3, #2
+Pasring ... 0x8040d4c: movs r2, #15
+Pasring ... 0x8040d4e: lsl.w r3, r2, r3
+Pasring ... 0x8040d52: mvns r3, r3
+Pasring ... 0x8040d54: ldr r2, [r7, #16]
+Pasring ... 0x8040d56: ands r3, r2
+Pasring ... 0x8040d58: str r3, [r7, #16]
+Pasring ... 0x8040d5a: ldr r3, [r7, #0]
+Pasring ... 0x8040d5c: ldr r2, [r3, #16]
+Pasring ... 0x8040d5e: ldr r3, [r7, #20]
+Pasring ... 0x8040d60: and.w r3, r3, #7
+Pasring ... 0x8040d64: lsls r3, r3, #2
+Pasring ... 0x8040d66: lsl.w r3, r2, r3
+Pasring ... 0x8040d6a: ldr r2, [r7, #16]
+Pasring ... 0x8040d6c: orrs r3, r2
+Pasring ... 0x8040d6e: str r3, [r7, #16]
+Pasring ... 0x8040d70: ldr r3, [r7, #20]
+Pasring ... 0x8040d72: lsrs r2, r3, #3
+Pasring ... 0x8040d74: ldr r3, [r7, #4]
+Pasring ... 0x8040d76: adds r2, #8
+Pasring ... 0x8040d78: ldr r1, [r7, #16]
+Pasring ... 0x8040d7a: str.w r1, [r3, r2, lsl #2]
+Pasring ... 0x8040d7e: ldr r3, [r7, #4]
+Pasring ... 0x8040d80: ldr r3, [r3, #0]
+Pasring ... 0x8040d82: str r3, [r7, #16]
+Pasring ... 0x8040d84: ldr r3, [r7, #20]
+Pasring ... 0x8040d86: lsls r3, r3, #1
+Pasring ... 0x8040d88: movs r2, #3
+Pasring ... 0x8040d8a: lsl.w r3, r2, r3
+Pasring ... 0x8040d8e: mvns r3, r3
+Pasring ... 0x8040d90: ldr r2, [r7, #16]
+Pasring ... 0x8040d92: ands r3, r2
+Pasring ... 0x8040d94: str r3, [r7, #16]
+Pasring ... 0x8040d96: ldr r3, [r7, #0]
+Pasring ... 0x8040d98: ldr r3, [r3, #4]
+Pasring ... 0x8040d9a: and.w r2, r3, #3
+Pasring ... 0x8040d9e: ldr r3, [r7, #20]
+Pasring ... 0x8040da0: lsls r3, r3, #1
+Pasring ... 0x8040da2: lsl.w r3, r2, r3
+Pasring ... 0x8040da6: ldr r2, [r7, #16]
+Pasring ... 0x8040da8: orrs r3, r2
+Pasring ... 0x8040daa: str r3, [r7, #16]
+Pasring ... 0x8040dac: ldr r3, [r7, #4]
+Pasring ... 0x8040dae: ldr r2, [r7, #16]
+Pasring ... 0x8040db0: str r2, [r3, #0]
+Pasring ... 0x8040db2: ldr r3, [r7, #0]
+Pasring ... 0x8040db4: ldr r3, [r3, #4]
+Pasring ... 0x8040db6: and.w r3, r3, #268435456
+Pasring ... 0x8040dba: cmp r3, #0
+Pasring ... 0x8040dbc: beq.w 8040f08 <HAL_GPIO_Init+0x2bc>
+Pasring ... 0x8040dc0: ldr r2, [pc, #360]
+Pasring ... 0x8040dc2: ldr r3, [r7, #20]
+Pasring ... 0x8040dc4: lsrs r3, r3, #2
+Pasring ... 0x8040dc6: adds r3, #24
+Pasring ... 0x8040dc8: ldr.w r3, [r2, r3, lsl #2]
+Pasring ... 0x8040dcc: str r3, [r7, #16]
+Pasring ... 0x8040dce: ldr r3, [r7, #20]
+Pasring ... 0x8040dd0: and.w r3, r3, #3
+Pasring ... 0x8040dd4: lsls r3, r3, #3
+Pasring ... 0x8040dd6: movs r2, #15
+Pasring ... 0x8040dd8: lsl.w r3, r2, r3
+Pasring ... 0x8040ddc: mvns r3, r3
+Pasring ... 0x8040dde: ldr r2, [r7, #16]
+Pasring ... 0x8040de0: ands r3, r2
+Pasring ... 0x8040de2: str r3, [r7, #16]
+Pasring ... 0x8040de4: ldr r3, [r7, #4]
+Pasring ... 0x8040de6: ldr r2, [pc, #328]
+Pasring ... 0x8040de8: cmp r3, r2
+Pasring ... 0x8040dea: beq.n 8040e38 <HAL_GPIO_Init+0x1ec>
+Pasring ... 0x8040dec: ldr r3, [r7, #4]
+Pasring ... 0x8040dee: ldr r2, [pc, #324]
+Pasring ... 0x8040df0: cmp r3, r2
+Pasring ... 0x8040df2: beq.n 8040e34 <HAL_GPIO_Init+0x1e8>
+Pasring ... 0x8040df4: ldr r3, [r7, #4]
+Pasring ... 0x8040df6: ldr r2, [pc, #320]
+Pasring ... 0x8040df8: cmp r3, r2
+Pasring ... 0x8040dfa: beq.n 8040e30 <HAL_GPIO_Init+0x1e4>
+Pasring ... 0x8040dfc: ldr r3, [r7, #4]
+Pasring ... 0x8040dfe: ldr r2, [pc, #316]
+Pasring ... 0x8040e00: cmp r3, r2
+Pasring ... 0x8040e02: beq.n 8040e2c <HAL_GPIO_Init+0x1e0>
+Pasring ... 0x8040e04: ldr r3, [r7, #4]
+Pasring ... 0x8040e06: ldr r2, [pc, #312]
+Pasring ... 0x8040e08: cmp r3, r2
+Pasring ... 0x8040e0a: beq.n 8040e28 <HAL_GPIO_Init+0x1dc>
+Pasring ... 0x8040e0c: ldr r3, [r7, #4]
+Pasring ... 0x8040e0e: ldr r2, [pc, #308]
+Pasring ... 0x8040e10: cmp r3, r2
+Pasring ... 0x8040e12: beq.n 8040e24 <HAL_GPIO_Init+0x1d8>
+Pasring ... 0x8040e14: ldr r3, [r7, #4]
+Pasring ... 0x8040e16: ldr r2, [pc, #304]
+Pasring ... 0x8040e18: cmp r3, r2
+Pasring ... 0x8040e1a: bne.n 8040e20 <HAL_GPIO_Init+0x1d4>
+Pasring ... 0x8040e1c: movs r3, #6
+Pasring ... 0x8040e1e: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e20: movs r3, #7
+Pasring ... 0x8040e22: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e24: movs r3, #5
+Pasring ... 0x8040e26: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e28: movs r3, #4
+Pasring ... 0x8040e2a: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e2c: movs r3, #3
+Pasring ... 0x8040e2e: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e30: movs r3, #2
+Pasring ... 0x8040e32: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e34: movs r3, #1
+Pasring ... 0x8040e36: b.n 8040e3a <HAL_GPIO_Init+0x1ee>
+Pasring ... 0x8040e38: movs r3, #0
+Pasring ... 0x8040e3a: ldr r2, [r7, #20]
+Pasring ... 0x8040e3c: and.w r2, r2, #3
+Pasring ... 0x8040e40: lsls r2, r2, #3
+Pasring ... 0x8040e42: lsls r3, r2
+Pasring ... 0x8040e44: ldr r2, [r7, #16]
+Pasring ... 0x8040e46: orrs r3, r2
+Pasring ... 0x8040e48: str r3, [r7, #16]
+Pasring ... 0x8040e4a: ldr r1, [pc, #224]
+Pasring ... 0x8040e4c: ldr r3, [r7, #20]
+Pasring ... 0x8040e4e: lsrs r3, r3, #2
+Pasring ... 0x8040e50: adds r3, #24
+Pasring ... 0x8040e52: ldr r2, [r7, #16]
+Pasring ... 0x8040e54: str.w r2, [r1, r3, lsl #2]
+Pasring ... 0x8040e58: ldr r3, [pc, #208]
+Pasring ... 0x8040e5a: ldr.w r3, [r3, #128]
+Pasring ... 0x8040e5e: str r3, [r7, #16]
+Pasring ... 0x8040e60: ldr r3, [r7, #12]
+Pasring ... 0x8040e62: mvns r3, r3
+Pasring ... 0x8040e64: ldr r2, [r7, #16]
+Pasring ... 0x8040e66: ands r3, r2
+Pasring ... 0x8040e68: str r3, [r7, #16]
+Pasring ... 0x8040e6a: ldr r3, [r7, #0]
+Pasring ... 0x8040e6c: ldr r3, [r3, #4]
+Pasring ... 0x8040e6e: and.w r3, r3, #65536
+Pasring ... 0x8040e72: cmp r3, #0
+Pasring ... 0x8040e74: beq.n 8040e7e <HAL_GPIO_Init+0x232>
+Pasring ... 0x8040e76: ldr r2, [r7, #16]
+Pasring ... 0x8040e78: ldr r3, [r7, #12]
+Pasring ... 0x8040e7a: orrs r3, r2
+Pasring ... 0x8040e7c: str r3, [r7, #16]
+Pasring ... 0x8040e7e: ldr r2, [pc, #172]
+Pasring ... 0x8040e80: ldr r3, [r7, #16]
+Pasring ... 0x8040e82: str.w r3, [r2, #128]
+Pasring ... 0x8040e86: ldr r3, [pc, #164]
+Pasring ... 0x8040e88: ldr.w r3, [r3, #132]
+Pasring ... 0x8040e8c: str r3, [r7, #16]
+Pasring ... 0x8040e8e: ldr r3, [r7, #12]
+Pasring ... 0x8040e90: mvns r3, r3
+Pasring ... 0x8040e92: ldr r2, [r7, #16]
+Pasring ... 0x8040e94: ands r3, r2
+Pasring ... 0x8040e96: str r3, [r7, #16]
+Pasring ... 0x8040e98: ldr r3, [r7, #0]
+Pasring ... 0x8040e9a: ldr r3, [r3, #4]
+Pasring ... 0x8040e9c: and.w r3, r3, #131072
+Pasring ... 0x8040ea0: cmp r3, #0
+Pasring ... 0x8040ea2: beq.n 8040eac <HAL_GPIO_Init+0x260>
+Pasring ... 0x8040ea4: ldr r2, [r7, #16]
+Pasring ... 0x8040ea6: ldr r3, [r7, #12]
+Pasring ... 0x8040ea8: orrs r3, r2
+Pasring ... 0x8040eaa: str r3, [r7, #16]
+Pasring ... 0x8040eac: ldr r2, [pc, #124]
+Pasring ... 0x8040eae: ldr r3, [r7, #16]
+Pasring ... 0x8040eb0: str.w r3, [r2, #132]
+Pasring ... 0x8040eb4: ldr r3, [pc, #116]
+Pasring ... 0x8040eb6: ldr r3, [r3, #0]
+Pasring ... 0x8040eb8: str r3, [r7, #16]
+Pasring ... 0x8040eba: ldr r3, [r7, #12]
+Pasring ... 0x8040ebc: mvns r3, r3
+Pasring ... 0x8040ebe: ldr r2, [r7, #16]
+Pasring ... 0x8040ec0: ands r3, r2
+Pasring ... 0x8040ec2: str r3, [r7, #16]
+Pasring ... 0x8040ec4: ldr r3, [r7, #0]
+Pasring ... 0x8040ec6: ldr r3, [r3, #4]
+Pasring ... 0x8040ec8: and.w r3, r3, #1048576
+Pasring ... 0x8040ecc: cmp r3, #0
+Pasring ... 0x8040ece: beq.n 8040ed8 <HAL_GPIO_Init+0x28c>
+Pasring ... 0x8040ed0: ldr r2, [r7, #16]
+Pasring ... 0x8040ed2: ldr r3, [r7, #12]
+Pasring ... 0x8040ed4: orrs r3, r2
+Pasring ... 0x8040ed6: str r3, [r7, #16]
+Pasring ... 0x8040ed8: ldr r2, [pc, #80]
+Pasring ... 0x8040eda: ldr r3, [r7, #16]
+Pasring ... 0x8040edc: str r3, [r2, #0]
+Pasring ... 0x8040ede: ldr r3, [pc, #76]
+Pasring ... 0x8040ee0: ldr r3, [r3, #4]
+Pasring ... 0x8040ee2: str r3, [r7, #16]
+Pasring ... 0x8040ee4: ldr r3, [r7, #12]
+Pasring ... 0x8040ee6: mvns r3, r3
+Pasring ... 0x8040ee8: ldr r2, [r7, #16]
+Pasring ... 0x8040eea: ands r3, r2
+Pasring ... 0x8040eec: str r3, [r7, #16]
+Pasring ... 0x8040eee: ldr r3, [r7, #0]
+Pasring ... 0x8040ef0: ldr r3, [r3, #4]
+Pasring ... 0x8040ef2: and.w r3, r3, #2097152
+Pasring ... 0x8040ef6: cmp r3, #0
+Pasring ... 0x8040ef8: beq.n 8040f02 <HAL_GPIO_Init+0x2b6>
+Pasring ... 0x8040efa: ldr r2, [r7, #16]
+Pasring ... 0x8040efc: ldr r3, [r7, #12]
+Pasring ... 0x8040efe: orrs r3, r2
+Pasring ... 0x8040f00: str r3, [r7, #16]
+Pasring ... 0x8040f02: ldr r2, [pc, #40]
+Pasring ... 0x8040f04: ldr r3, [r7, #16]
+Pasring ... 0x8040f06: str r3, [r2, #4]
+Pasring ... 0x8040f08: ldr r3, [r7, #20]
+Pasring ... 0x8040f0a: adds r3, #1
+Pasring ... 0x8040f0c: str r3, [r7, #20]
+Pasring ... 0x8040f0e: ldr r3, [r7, #0]
+Pasring ... 0x8040f10: ldr r2, [r3, #0]
+Pasring ... 0x8040f12: ldr r3, [r7, #20]
+Pasring ... 0x8040f14: lsr.w r3, r2, r3
+Pasring ... 0x8040f18: cmp r3, #0
+Pasring ... 0x8040f1a: bne.w 8040c5c <HAL_GPIO_Init+0x10>
+Pasring ... 0x8040f22: adds r7, #28
+Pasring ... 0x8040f24: mov sp, r7
+Pasring ... 0x8040f26: ldr.w r7, [sp], #4
+Pasring ... 0x8040f4c: push {r7}
+Pasring ... 0x8040f4e: sub sp, #12
+Pasring ... 0x8040f50: add r7, sp, #0
+Pasring ... 0x8040f52: str r0, [r7, #4]
+Pasring ... 0x8040f54: mov r3, r1
+Pasring ... 0x8040f56: strh r3, [r7, #2]
+Pasring ... 0x8040f58: mov r3, r2
+Pasring ... 0x8040f5a: strb r3, [r7, #1]
+Pasring ... 0x8040f5c: ldrb r3, [r7, #1]
+Pasring ... 0x8040f5e: cmp r3, #0
+Pasring ... 0x8040f60: beq.n 8040f6a <HAL_GPIO_WritePin+0x1e>
+Pasring ... 0x8040f62: ldrh r2, [r7, #2]
+Pasring ... 0x8040f64: ldr r3, [r7, #4]
+Pasring ... 0x8040f66: str r2, [r3, #24]
+Pasring ... 0x8040f68: b.n 8040f70 <HAL_GPIO_WritePin+0x24>
+Pasring ... 0x8040f6a: ldrh r2, [r7, #2]
+Pasring ... 0x8040f6c: ldr r3, [r7, #4]
+Pasring ... 0x8040f6e: str r2, [r3, #40]
+Pasring ... 0x8040f72: adds r7, #12
+Pasring ... 0x8040f74: mov sp, r7
+Pasring ... 0x8040f76: ldr.w r7, [sp], #4
+Pasring ... 0x8040f7c: push {r4, r5, r6, lr}
+Pasring ... 0x8040f7e: ldr r5, [pc, #52]
+Pasring ... 0x8040f80: movs r6, #0
+Pasring ... 0x8040f82: ldr r4, [pc, #52]
+Pasring ... 0x8040f84: subs r4, r4, r5
+Pasring ... 0x8040f86: asrs r4, r4, #2
+Pasring ... 0x8040f88: cmp r6, r4
+Pasring ... 0x8040f8a: bne.n 8040fa0 <__libc_init_array+0x24>
+Pasring ... 0x8040f8c: ldr r5, [pc, #44]
+Pasring ... 0x8040f8e: movs r6, #0
+Pasring ... 0x8040f90: ldr r4, [pc, #44]
+Pasring ... 0x8040f92: bl 8040fc4 <_init>
+Pasring ... 0x8040f96: subs r4, r4, r5
+Pasring ... 0x8040f98: asrs r4, r4, #2
+Pasring ... 0x8040f9a: cmp r6, r4
+Pasring ... 0x8040f9c: bne.n 8040faa <__libc_init_array+0x2e>
+Pasring ... 0x8040f9e: pop {r4, r5, r6, pc}
+Done building CFG

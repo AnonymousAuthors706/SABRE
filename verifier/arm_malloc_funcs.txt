@@ -1,0 +1,10 @@
+malloc
+_malloc_r
+__malloc_lock
+__malloc_unlock
+sbrk_aligned
+_sbrk_r
+__retarget_lock_acquire_recursive
+__retarget_lock_release_recursive
+free
+_free_r
