@@ -4,13 +4,12 @@
 
 ## Repository Structure
 
-SABRE current prototype is split into three branches for its separate features (to be merged together soon):
+SABRE current prototype is split into three branches for the features described in the paper:
 - [`ovf`](https://github.com/AnonymousAuthors706/SABRE/tree/ovf) branch for buffer overflow detection/patching in MSP430 and ARM Cortex-M33;
 - [`uaf-msp`](https://github.com/AnonymousAuthors706/SABRE/tree/uaf-msp) branch for use-after-free detection/patching in MSP430;
 - [`uaf-arm`](https://github.com/AnonymousAuthors706/SABRE/tree/uaf-arm) branch for use-after-free detection/patching in ARM Cortex-M33.
 
 Within each branch, the repository is structured into three main directories: `ACFA`, `TRACES`, and `verifier`. `ACFA` and `TRACES` are for two open-source CFA architectures. `ACFA` is hardware-based and built aside MSP430 MCU, and `TRACES` is instrumentation-based and built to run on ARM Cortex-M33. We utilize the open-source versions of [ACFA](https://github.com/RIT-CHAOS-SEC/ACFA) and [TRACES](https://github.com/RIT-CHAOS-SEC/TRACES) architectures for generating CFLogs that are used by SABRE for its analysis. All source codes within the `verifier` directory implement the functionality of our prototypes. 
-
 
 ### The `ACFA` and `TRACES` Directories
 
